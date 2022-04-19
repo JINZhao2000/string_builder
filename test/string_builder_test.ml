@@ -22,7 +22,11 @@ let suite =
     "sub_string_exnmnl" >:: (fun _ -> assert_raises (Invalid_argument "Length of substring out of bound") (fun() ->(sub_string data 5 13)));
 
     "cost" >:: (fun _ -> assert_equal (cost data) 52);
-    "balance" >:: (fun _ -> assert_bool "not balanced" ((cost (balance data)) <= (cost data)))
+    "balance" >:: (fun _ -> assert_bool "not balanced" ((cost (balance data)) <= (cost data)));
+    "gain" >:: (fun _  -> assert_bool "problem of balance" (
+      let (min, _, _, _) = gains 12 128 in 
+      min >= 0
+    ))
   ]
 
 let _ = run_test_tt_main suite

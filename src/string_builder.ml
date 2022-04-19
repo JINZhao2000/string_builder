@@ -12,10 +12,10 @@
     let max_char_code = 122
 
     (** la longueur maximale pour un random string *)
-    let max_random_string_length = 16
+    let max_random_string_length = 128
 
     (** la profondeur des random strings pour calculer la valeur de perd *)
-    let max_depth_random_string_for_gains = 8
+    let max_depth_random_string_for_gains = 12
     (* Constantes *)
 
     (* Q1 *)
